@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 100%;
+            background-color: aqua;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        
+        }
+        .con{
+            width: 100%;
+            display: grid;
+            height: 100%;
+            background-color: rgb(253, 164, 31);
+            /* grid-template-columns: repeat(1,3fr); */
+            grid-template-rows: repeat(2,1fr);
+            gap: 20px;
+        }
+        .con1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            height: 100%;
+            gap: 20px;
+
+        }
+        .box-1{
+            border: 2px dotted black;
+            /* height: 100%; */
+            background-color: blue;
+            /* width: 100%; */
+
+        }
+        
+        .box-2{
+            border: 2px dotted black;
+            /* width: 100%; */
+            background-color: brown;
+        }
+        
+        .box-3{
+            border: 2px dotted black;
+            background-color: blueviolet;
+        }
+        
+        .box-4{
+            border: 2px dotted black;
+            background-color: chartreuse;
+        }
+
+        @media screen and (max-width:576px){
+               .container{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                height: 100vh;
+                /* width: 100vw; */
+                /* padding: 10px; */
+               } 
+               .box-1{
+                /* height: 100%; */
+                width: 100%;
+
+               }
+               .con{
+                display: grid;
+                background-color: rgb(233, 217, 217);
+                grid-template-rows: repeat(2,1fr);
+                height: 100%;
+                /* width: 100%; */
+               }
+               .con1{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                height: 100%;
+               }
+            
+        }
+
+        @media screen and (min-width:576px) and (max-width:780px){
+               .container{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                height: 100vh;
+                /* width: 100vw; */
+                /* padding: 10px; */
+               } 
+               .box-1{
+                /* height: 100%; */
+                width: 100%;
+
+               }
+               .con{
+                display: grid;
+                background-color: rgb(10, 255, 121);
+                grid-template-rows: repeat(2,1fr);
+                height: 100%;
+                /* width: 100%; */
+               }
+               .con1{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                height: 100%;
+               }
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box-1">1</div>
+        <div class="con">
+            <div class="box-2">2</div>
+                <div class="con1">
+                    <div class="box-3">3</div>
+                    <div class="box-4">4</div>
+                </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
